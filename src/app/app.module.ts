@@ -5,13 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomePagesComponent } from './pages/home-pages/home-pages.component';
 import { FormPagesComponent } from './pages/form-pages/form-pages.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePagesComponent,
-    FormPagesComponent
+    FormPagesComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
