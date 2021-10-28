@@ -1,0 +1,11 @@
+.like-number{
+  background-color: #00c4a7;
+  border-radius: 9999px;
+  color: white;
+  padding: 6px 13px;
+  /*position: absolute;*/
+  /*z-index: 3;*/
+  /*top: 15px;*/
+  /*right: 51px;*/
+  margin-bottom: 20px;
+}
