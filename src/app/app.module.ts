@@ -8,7 +8,7 @@ import { FormPagesComponent } from './pages/form-pages/form-pages.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { ImageContainerComponent } from './components/image-container/image-container.component';
 import { ImageComponent } from './components/image-container/image/image.component';
-
+import { FormComponent } from './components/form/form.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,8 @@ import { ImageComponent } from './components/image-container/image/image.compone
     FormPagesComponent,
     MenuComponent,
     ImageContainerComponent,
-    ImageComponent
+    ImageComponent,
+    FormComponent,
   ],
   imports: [
     BrowserModule,
