@@ -9,6 +9,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { ImageContainerComponent } from './components/image-container/image-container.component';
 import { ImageComponent } from './components/image-container/image/image.component';
 import { FormComponent } from './components/form/form.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FormComponent } from './components/form/form.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

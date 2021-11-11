@@ -1,46 +1,56 @@
+<form *ngIf="!sendForm" [formGroup]="contactForm" (ngSubmit)="submitForm()">
 <div class="field">
   <label class="label">Name</label>
   <div class="control">
-    <input class="input" type="text" placeholder="Your name">
+    <input [ngClass]="{'is-danger': validForm && contactForm.controls.name.invalid}" formControlName="name" class="input" type="text" placeholder="Your name">
   </div>
+  <p *ngIf="validForm && contactForm.controls.name.invalid" class="help is-danger">Your name is required</p>
 </div>
-
 <div class="field">
   <label class="label">Email</label>
   <div class="control">
-    <input class="input is-danger" type="email" placeholder="Email input">
+    <input [ngClass]="{'is-danger': validForm && contactForm.controls.email.invalid}" formControlName="email" class="input" type="email" placeholder="Email input">
   </div>
-  <p class="help is-danger">This email is invalid</p>
+  <p *ngIf="validForm && contactForm.controls.email.invalid" class="help is-danger">This email is invalid</p>
 </div>
 
 <div class="field">
   <label class="label">Subject</label>
   <div class="control">
-    <input class="input" type="text" placeholder="What do you want?">
+    <input [ngClass]="{'is-danger': validForm && contactForm.controls.subject.invalid}" formControlName="subject" class="input" type="text" placeholder="What do you want?">
   </div>
+  <p *ngIf="validForm && contactForm.controls.subject.invalid" class="help is-danger">Subject is required</p>
 </div>
 
 <div class="field">
   <label class="label">Message</label>
   <div class="control">
-    <textarea class="textarea" placeholder="Your message"></textarea>
+    <textarea [ngClass]="{'is-danger': validForm && contactForm.controls.comments.invalid}" formControlName="comments" class="textarea" placeholder="Your message"></textarea>
   </div>
+  <p *ngIf="validForm && contactForm.controls.comments.invalid" class="help is-danger">Comment is required</p>
 </div>
 
 <div class="field">
   <div class="control">
     <label class="checkbox">
-      <input type="checkbox">
+      <input [ngClass]="{'is-danger': validForm && contactForm.controls.conditions.invalid}" type="checkbox" formControlName="conditions">
       I agree to the <a href="#">terms and conditions</a>
     </label>
   </div>
+  <p *ngIf="validForm && contactForm.controls.conditions.invalid" class="help is-danger">Please accept conditions</p>
 </div>
 
 <div class="field is-grouped">
   <div class="control">
-    <button class="button is-link">Submit</button>
+    <button type="submit" class="button is-link">Submit</button>
   </div>
   <div class="control">
-    <button class="button is-link is-light">Cancel</button>
+    <button (click)="resetForm()" class="button is-link is-light">Cancel</button>
   </div>
+</div>
+</form>
+
+<div class="box" *ngIf="sendForm">
+  <p class="block">Message is in our mailbox!</p>
+  <button (click)="resetForm()" class="button is-link is-light">Cancel</button>
 </div>
