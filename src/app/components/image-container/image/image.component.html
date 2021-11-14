@@ -1,8 +1,9 @@
 <!--<div class="image is-flex-direction-column column is-one-quarter">-->
-  <figure class="image container block is-128x128">
-    <img class="is-rounded" src="{{singleImage.image}}">
-  </figure>
-  <span class="tag is-rounded is-primary is-medium is-light block">{{singleImage.likes}} likes</span>
-  <p class="block container">{{singleImage.description}}</p>
-  <button (click)="newLike()" class="container button is-primary block is-flex m-auto">Like</button>
+<figure class="image container block is-128x128">
+  <img class="is-rounded" src="{{singleImage.image}}">
+</figure>
+<span class="tag is-rounded is-primary is-medium is-light block">{{singleImage.likes}} likes</span>
+<p class="block container">{{singleImage.description}}</p>
+<button (click)="newLike()" class="container button is-primary block is-flex m-auto">Like</button>
+<app-comments></app-comments>
 <!--</div>-->
