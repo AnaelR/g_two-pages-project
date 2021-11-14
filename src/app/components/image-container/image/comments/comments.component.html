@@ -1,0 +1,13 @@
+<form [formGroup]="comment" (ngSubmit)="submitComment()">
+  <div class="field">
+    <div class="control">
+      <textarea formControlName="comment" class="textarea block" placeholder="Write your comment"></textarea>
+    </div>
+  </div>
+  <div class="control">
+    <button type="submit" class="button is-link is-light">Send</button>
+  </div>
+</form>
+<div *ngFor="let com of comments" class="comment content-box has-background-light block">
+  <p class="content block">{{com}}</p>
+</div>

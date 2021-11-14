@@ -10,7 +10,8 @@ import { ImageContainerComponent } from './components/image-container/image-cont
 import { ImageComponent } from './components/image-container/image/image.component';
 import { FormComponent } from './components/form/form.component';
 import {ReactiveFormsModule} from "@angular/forms";
-
+import { CommentsComponent } from './components/image-container/image/comments/comments.component';
+import { SmileAddPipe } from './pipe/smile-add.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +21,8 @@ import {ReactiveFormsModule} from "@angular/forms";
     ImageContainerComponent,
     ImageComponent,
     FormComponent,
+    CommentsComponent,
+    SmileAddPipe,
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,7 @@ import * as faker from "faker";
 })
 export class HomePagesComponent implements OnInit {
 
+  firstTitle: string = "What a beautiful picture library !"
   firstSectionImages: ImageContainer[]
   secondSectionImages: ImageContainer[]
 
@@ -18,7 +19,7 @@ export class HomePagesComponent implements OnInit {
       new ImageContainer({
         image: faker.image.imageUrl(128, 128, undefined, true, true),
         description: faker.lorem.sentence(15),
-        likes: faker.datatype.number(5)
+        likes: faker.datatype.number(5),
       }),
       new ImageContainer({
         image: faker.image.imageUrl(128, 128, undefined, true, true),
